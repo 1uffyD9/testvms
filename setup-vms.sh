@@ -90,7 +90,11 @@ function install_vms_latest() {
       echo "[!] Skipping extracting the content"
     fi
   fi
-
+  # sudo docker-compose build : NO NEED
+  # sudo docker/setEnv.sh release
+  # sudo docker-compose up
+  # ask if the user wants to change the password
+  # sudo docker exec -it $(sudo docker ps --format '{{.Names}}' --filter 'name=uwsgi') ./manage.py changepassword admin
 }
 remove_de_old
 install_de_ubuntu
